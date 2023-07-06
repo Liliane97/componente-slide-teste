@@ -27,7 +27,7 @@
         <v-card
         height="200"
           :ripple="false"
-          color="black"
+          color="blue"
           
         >
           {{ s }}
