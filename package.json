@@ -7,8 +7,14 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "eslint --ext \".ts,.js,.vue\" --ignore-path .gitignore .",
-    "lintfix": "eslint --fix --ext \".ts,.js,.vue\" --ignore-path .gitignore ."
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "npx nuxi typecheck",
+    "test": "npm run lint:fix && cypress run",
+    "release": "release-it",
+    "patch": "npm run release -- patch --ci",
+    "deploy": "npx wrangler pages dev .output/public"
+
   },
   "lint-staged": {
     "**/*.{js,ts,vue,html,css}": [
